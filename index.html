@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rachna — Dot Mandala Artist</title>
+<meta name="description" content="Rachna | dotsbyrach — original dot mandala art, made one point at a time. Commissions open.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+
+<!-- ============ NAV ============ -->
+<header class="nav" id="top">
+  <a href="#top" class="nav__brand">
+    <span class="brand-dot"></span>
+    <span class="brand-text">dotsbyrach</span>
+  </a>
+  <nav class="nav__links">
+    <a href="#gallery">Gallery</a>
+    <a href="#about">About</a>
+    <a href="#commission">Commission</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a href="https://www.instagram.com/dotsbyrach/" target="_blank" rel="noopener" class="nav__ig" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1"/></svg>
+  </a>
+  <button class="nav__burger" id="burger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="nav__mobile" id="navMobile">
+  <a href="#gallery">Gallery</a>
+  <a href="#about">About</a>
+  <a href="#commission">Commission</a>
+  <a href="#contact">Contact</a>
+  <a href="https://www.instagram.com/dotsbyrach/" target="_blank" rel="noopener">Instagram ↗</a>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <canvas id="mandalaCanvas" class="hero__canvas" aria-hidden="true"></canvas>
+  <div class="hero__inner">
+    <p class="eyebrow">Dot Mandala Art · Bengaluru</p>
+    <h1 class="hero__title">Stillness,<br>placed one dot<br>at a time.</h1>
+    <p class="hero__sub">Rachna hand-builds each mandala from thousands of individual dots — a slow, meditative practice turned into wearable and displayable art.</p>
+    <div class="hero__cta">
+      <a href="#gallery" class="btn btn--primary">View the gallery</a>
+      <a href="#commission" class="btn btn--ghost">Commission a piece</a>
+    </div>
+  </div>
+  <div class="hero__scroll" aria-hidden="true">
+    <span></span>
+    <p>scroll</p>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="gallery" id="gallery">
+  <div class="section__head">
+    <p class="eyebrow">Selected work</p>
+    <h2>Every piece begins as a single point.</h2>
+  </div>
+
+  <div class="gallery__grid" id="galleryGrid">
+    <!-- Placeholder tiles — replace with real photos, see README -->
+  </div>
+
+  <p class="gallery__note">Showing placeholder patterns. Swap in Rachna's photos — instructions in the project README.</p>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="about" id="about">
+  <div class="about__art" aria-hidden="true">
+    <svg viewBox="0 0 400 400" class="about__svg">
+      <g id="aboutMandala"></g>
+    </svg>
+  </div>
+  <div class="about__copy">
+    <p class="eyebrow">About the artist</p>
+    <h2>Rachna</h2>
+    <p class="about__lead">Dot mandala art is patience made visible. What looks like intricate lace is really thousands of single dots, placed one after another with a fine tool, layer by layer, until a pattern emerges that couldn't have been planned all at once.</p>
+    <p>Rachna works from Bengaluru, drawing on festival colour, temple geometry, and everyday moments of calm. Each piece — whether a small keychain or a large wall panel — is entirely hand-dotted, no stencils, no shortcuts.</p>
+    <div class="about__stats">
+      <div><span>100%</span><p>Hand-dotted, no printing</p></div>
+      <div><span>1 dot</span><p>at a time, every time</p></div>
+      <div><span>Custom</span><p>colours &amp; sizes on request</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMMISSION ============ -->
+<section class="commission" id="commission">
+  <div class="section__head">
+    <p class="eyebrow">Commission a piece</p>
+    <h2>Tell her what you have in mind.</h2>
+    <p class="commission__intro">Fill this in, then send it straight to Instagram DM — no email needed. She'll reply with pricing and timeline.</p>
+  </div>
+
+  <div class="commission__wrap">
+    <form class="commission__form" id="commissionForm">
+      <div class="field">
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="field">
+        <label for="ig">Your Instagram handle (optional)</label>
+        <input type="text" id="ig" name="ig" placeholder="@yourhandle">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="size">Size</label>
+          <select id="size" name="size">
+            <option>Keychain / small (under 4")</option>
+            <option>Medium canvas (8"–12")</option>
+            <option>Large wall panel (16"+)</option>
+            <option>Not sure yet</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="occasion">Occasion</label>
+          <input type="text" id="occasion" name="occasion" placeholder="Gift, home decor, festival...">
+        </div>
+      </div>
+      <div class="field">
+        <label for="colors">Preferred colours / theme</label>
+        <input type="text" id="colors" name="colors" placeholder="e.g. gold &amp; maroon, pastel, Krishna theme">
+      </div>
+      <div class="field">
+        <label for="message">Anything else she should know</label>
+        <textarea id="message" name="message" rows="4" placeholder="Reference images, deadline, budget range..."></textarea>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--full">Prepare message</button>
+    </form>
+
+    <div class="commission__result" id="commissionResult" hidden>
+      <p class="eyebrow">Ready to send</p>
+      <pre id="commissionMessage"></pre>
+      <div class="commission__result-actions">
+        <button class="btn btn--ghost" id="copyBtn" type="button">Copy message</button>
+        <a class="btn btn--primary" id="igSendBtn" href="https://www.instagram.com/dotsbyrach/" target="_blank" rel="noopener">Open Instagram DM ↗</a>
+      </div>
+      <p class="commission__hint">Paste the copied message into your DM to Rachna.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTACT / FOOTER ============ -->
+<footer class="footer" id="contact">
+  <div class="footer__dots" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <h2>Follow the work in progress.</h2>
+  <a href="https://www.instagram.com/dotsbyrach/" target="_blank" rel="noopener" class="btn btn--primary footer__ig">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1"/></svg>
+    @dotsbyrach
+  </a>
+  <p class="footer__meta">© <span id="year"></span> Rachna · dotsbyrach. Site by a very proud sibling.</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
